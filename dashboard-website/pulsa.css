@@ -1,58 +1,109 @@
 body {
-  margin: auto;
-  background-image: url(image/bg7.avif);
-  border-radius: 12px;
-  padding: 16px;
-  color: #333;
-  min-height: 37vh;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f1f1f1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
 }
 
+.mobile-container {
+  width: 375px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 20px 0;
+  position: relative;
+}
+
+/* Header / Bagian atas */
 .halaman-pulsa {
-  max-width: 400px;
-  margin: auto;
-  background: #fff;
-  border-radius: 12px;
-  padding: 26px;
-  color: #000000;
-  background-image: url(image/bg5.jpeg);
-  min-height: inherit;
-  background-repeat: no-repeat;
+  padding: 24px 20px 80px; /* Tambah padding bawah */
+  background-image: url('image/bg5.jpeg');
   background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+#halamanTitle {
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
 }
 
 .halaman-pulsa input {
-  width: 100%;
-  padding: 8px;
-  margin: 8px -9px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
+  width: 93%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-.layanan-form h4 {
-  margin: 0 0 10px;
-}
 .btn {
-  padding: 8px 12px;
-  margin: auto;
-  border: none;
-  border-radius: 5px;
-  color: #fff;
-  background: #007bff;
-  cursor: pointer;
-  /* width: 100%; untuk mempelebar tulisan lanjut */
-  margin-top: 0.5em;
-}
-.btn-wrp {
   width: 100%;
-  display: flex;
-}
-.button-pilihan {
-  display: inline;
-  background-color: aqua;
+  padding: 12px;
+  background: linear-gradient(to right, #007bff, #00c6ff);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
   cursor: pointer;
+  transition: background 0.3s ease;
 }
-#halamanTitle {
+
+.btn:hover {
+  background: linear-gradient(to right, #0056b3, #0095cc);
+}
+
+/* Riwayat */
+.riwayat-nomor {
+  padding: 0 20px 20px;
+  margin-top: -75px;
+  position: relative;
+  z-index: 1;
+}
+
+#riwayatTitle {
   text-align: center;
-  color: #fff;
-  text-transform: uppercase; //utuk membuat huruf besar semua
+  font-size: 16px;
+  font-weight: bold;
+  background: #ffffff;
+  padding: 10px;
+  border-radius: 12px 12px 0 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 0;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  background: #ffffff;
+  border-radius: 0 0 12px 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+th {
+  background-color: #f8f8f8;
+  font-weight: 600;
+}
+
+tr:last-child td {
+  border-bottom: none;
 }

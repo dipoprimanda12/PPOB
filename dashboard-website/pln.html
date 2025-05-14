@@ -1,23 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PLN</title>
-    <link rel="stylesheet" href="pln.css" />    
-</head>
-<body>
-  
-<div id="halamanpln" class="halaman-pln">
-  <h4 id="halamanTitle">Layanan PLN</h4>
-  <input id="nomorpln" type="number" placeholder="Masukkan Nomor Meter/ID PLN kamu" />
-  <button onclick="simpanNomorPLN()">Proses</button>
-</div>
+    <link rel="stylesheet" href="pln.css" />
+  </head>
+  <body>
+    <div class="mobile-container">
+      <!-- Form Input PLN -->
+      <div id="halamanpln" class="halaman-pln">
+        <h4 id="halamanTitle">Layanan PLN</h4>
+        <input
+          id="nomorpln"
+          type="number"
+          placeholder="Masukkan Nomor Meter/ID PLN kamu"
+        />
+        <button class="btn" onclick="simpanNomorPLN()">Proses</button>
+      </div>
 
-
-
-    <script src="main.js"></script>
-      
+      <!-- Riwayat Nomor -->
+      <div id="riwayatnomor" class="riwayat-nomor">
+        <h4 id="riwayatTitle">Riwayat Nomor</h4>
+        <table id="tabelRiwayat">
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Nomor Meter</th>
+              <th>Tanggal</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr onclick="pilihId('8897655456')">
+              <td>1</td>
+              <td>8897655456</td>
+              <td>2024-06-03</td>
+            </tr>
+            <tr onclick="pilihId('089876543210')">
+              <td>2</td>
+              <td>089876543210</td>
+              <td>2024-06-10</td>
+            </tr>
+            <tr onclick="pilihId('082112223334')">
+              <td>3</td>
+              <td>082112223334</td>
+              <td>2024-06-09</td>
+            </tr>
+            <tr onclick="pilihId('085612345678')">
+              <td>4</td>
+              <td>085612345678</td>
+              <td>2024-06-08</td>
+            </tr>
+            <tr onclick="pilihId('087712345678')">
+              <td>5</td>
+              <td>087712345678</td>
+              <td>2024-06-07</td>
+            </tr>
+            <tr onclick="pilihId('081398765432')">
+              <td>6</td>
+              <td>081398765432</td>
+              <td>2024-06-06</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
 
+    <script>
+      // Fungsi untuk memilih nomor dari tabel
+      function pilihId(nomor) {
+        document.getElementById("nomorpln").value = nomor;
+      }
+
+      // Fungsi menyimpan nomor PLN ke localStorage dan redirect ke halaman transaksi
+      function simpanNomorPLN() {
+        const nomorpln = document.getElementById("nomorpln").value.trim();
+        if (nomorpln) {
+          localStorage.setItem("nomorMeter", nomorpln);
+          window.location.href = "transaksi-pln.html";
+        } else {
+          alert("Silakan masukkan nomor meter/ID terlebih dahulu.");
+        }
+      }
+    </script>
+  </body>
 </html>

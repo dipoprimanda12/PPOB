@@ -65,6 +65,30 @@
       </div>
     </section>
 
-    <script src="main.js"></script>
+    <script>
+      // BAGIAN AKTIVITAS //=============
+      function filterTransaksi(status, event) {
+        // Hapus class 'active' dari semua tombol tab
+        document.querySelectorAll(".tab").forEach((btn) => {
+          btn.classList.remove("active");
+        });
+
+        // Tambahkan class 'active' ke tombol yang diklik
+        if (event && event.target) {
+          event.target.classList.add("active");
+        }
+
+        // Tampilkan/Filter item transaksi berdasarkan class
+        document.querySelectorAll(".item").forEach((item) => {
+          if (status === "all") {
+            item.style.display = "flex";
+          } else if (item.classList.contains(status)) {
+            item.style.display = "flex";
+          } else {
+            item.style.display = "none";
+          }
+        });
+      }
+    </script>
   </body>
 </html>

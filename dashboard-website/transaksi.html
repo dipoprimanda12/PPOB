@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Pulsa & Data</title>
     <link rel="stylesheet" href="transaksi.css" />
-    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
     <header class="header">
@@ -23,22 +22,40 @@
       <section class="pembayaran">
         <h2>Pulsa</h2>
         <div class="nominal">
-          <p id="pulsa-output">Nominal: -</p>
+          <p id="pulsa-display">Nominal: -</p>
         </div>
       </section>
 
       <div id="pilihanNominal" class="pilihan">
         <h4>Pilih Nominal Pulsa</h4>
         <div class="pilihan-nominal">
-          <button class="button-pilihan" onclick="pilihNominal('10000')">10RB</button>
-          <button class="button-pilihan" onclick="pilihNominal('20000')">20RB</button>
-          <button class="button-pilihan" onclick="pilihNominal('30000')">30RB</button>
-          <button class="button-pilihan" onclick="pilihNominal('40000')">40RB</button>
-          <button class="button-pilihan" onclick="pilihNominal('100000')">100RB</button>
-          <button class="button-pilihan" onclick="pilihNominal('150000')">150RB</button>
-          <button class="button-pilihan" onclick="pilihNominal('200000')">200RB</button>
-          <button class="button-pilihan" onclick="pilihNominal('250000')">250RB</button>
-          <button class="button-pilihan" onclick="pilihNominal('350000')">350RB</button>
+          <button class="button-pilihan" onclick="pilihNominal('10000')">
+            10RB
+          </button>
+          <button class="button-pilihan" onclick="pilihNominal('20000')">
+            20RB
+          </button>
+          <button class="button-pilihan" onclick="pilihNominal('30000')">
+            30RB
+          </button>
+          <button class="button-pilihan" onclick="pilihNominal('40000')">
+            40RB
+          </button>
+          <button class="button-pilihan" onclick="pilihNominal('100000')">
+            100RB
+          </button>
+          <button class="button-pilihan" onclick="pilihNominal('150000')">
+            150RB
+          </button>
+          <button class="button-pilihan" onclick="pilihNominal('200000')">
+            200RB
+          </button>
+          <button class="button-pilihan" onclick="pilihNominal('250000')">
+            250RB
+          </button>
+          <button class="button-pilihan" onclick="pilihNominal('350000')">
+            350RB
+          </button>
         </div>
       </div>
 
@@ -47,21 +64,74 @@
           <h3>Transaksi Berlangsung</h3>
           <div class="transaksi-item">
             <div>
-
-             <p id="tanggal">Tanggal</p>
-             <p id="jam">Waktu</p>
-             <!-- <p id="nomor-output">Nomor HP: -</p> -->
-             <p id="pulsa-output">Nominal: -</p>
-
+              <p id="tanggal">Tanggal: -</p>
+              <p id="jam">Waktu: -</p>
+              <p id="nomor-output">Nomor HP: -</p>
+              <p id="pulsa-terpilih">Nominal: -</p>
             </div>
             <button class="btn bayar" onclick="bayar()">BAYAR</button>
           </div>
-          <button class="btn lanjut" onclick="lanjutTransaksiBaru()">LANJUT TRANSAKSI BARU</button>
+          <button class="btn lanjut" onclick="lanjutTransaksiBaru()">
+            LANJUT TRANSAKSI BARU
+          </button>
         </div>
       </section>
     </main>
-    </main>
 
-    <script src="main.js"></script>
+    <script>
+      // Format Rupiah
+      function formatRupiah(angka) {
+        return parseInt(angka).toLocaleString("id-ID");
+      }
+
+      // Pilih Nominal Pulsa
+      function pilihNominal(nominal) {
+        localStorage.setItem("nominalPulsa", nominal);
+        document.getElementById(
+          "pulsa-display"
+        ).textContent = `Nominal: Rp ${formatRupiah(nominal)}`;
+        document.getElementById(
+          "pulsa-terpilih"
+        ).textContent = `Nominal: Rp ${formatRupiah(nominal)}`;
+      }
+
+      // Proses Bayar
+      function bayar() {
+        alert("Proses pembayaran sedang dilakukan...");
+      }
+
+      // Lanjut Transaksi Baru
+      function lanjutTransaksiBaru() {
+        localStorage.clear();
+        window.location.href = "index.html";
+      }
+
+      // Tampilkan Nomor dan Waktu
+      window.onload = function () {
+        const nomor = localStorage.getItem("nomorHP") || "-";
+        const nominal = localStorage.getItem("nominalPulsa");
+        const tanggal = new Date();
+
+        document.getElementById("nomor").value = nomor;
+        document.getElementById(
+          "nomor-output"
+        ).textContent = `Nomor HP: ${nomor}`;
+        document.getElementById(
+          "tanggal"
+        ).textContent = `Tanggal: ${tanggal.toLocaleDateString("id-ID")}`;
+        document.getElementById(
+          "jam"
+        ).textContent = `Waktu: ${tanggal.toLocaleTimeString("id-ID")}`;
+
+        if (nominal) {
+          document.getElementById(
+            "pulsa-display"
+          ).textContent = `Nominal: Rp ${formatRupiah(nominal)}`;
+          document.getElementById(
+            "pulsa-terpilih"
+          ).textContent = `Nominal: Rp ${formatRupiah(nominal)}`;
+        }
+      };
+    </script>
   </body>
 </html>

@@ -56,7 +56,22 @@
       </div>
     </main>
 
-    <script src="main.js">
+    <script>
+      // BAGIAN KOTAK MASUK //===========
+      lucide.createIcons();
+
+      // Tampilkan jam sekarang pada pesan "Hari Ini"
+      document.getElementById("today-time").textContent =
+        new Date().toLocaleTimeString("id-ID", {
+          hour: "2-digit",
+          minute: "2-digit",
+        });
+
+      // Fungsi hapus pesan
+      function hapusPesan(btn) {
+        const message = btn.closest(".message");
+        if (message) message.remove();
+      }
     </script>
   </body>
 </html>

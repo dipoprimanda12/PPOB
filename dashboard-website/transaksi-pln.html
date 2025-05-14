@@ -16,14 +16,14 @@
 
     <main>
       <section class="nomor-input">
-        <label for="nomor">Nomor Meter/ID</label>
+        <label for="nomormeter">Nomor Meter/ID</label>
         <input type="text" id="nomormeter" readonly />
       </section>
 
       <section class="pembayaran">
         <h2>PLN</h2>
         <div class="nominal">
-          <p id="pln-nominal">Nominal</p>
+          <p id="meter-display">Nominal: -</p>
         </div>
       </section>
 
@@ -59,14 +59,15 @@
           </button>
         </div>
       </div>
+
       <section class="transaksi">
         <div class="transaksi-box">
           <h3>Transaksi Berlangsung</h3>
           <div class="transaksi-item">
             <div>
               <p id="tanggal">Tanggal</p>
-              <p id="jam">waktu</p>
-              <p id="pln-nominal-transaksi">Nominal: -</p>
+              <p id="jam">Waktu</p>
+              <p id="meter-terpilih">Nominal: -</p>
             </div>
             <button class="btn bayar" onclick="bayar()">BAYAR</button>
           </div>
@@ -77,6 +78,55 @@
       </section>
     </main>
 
-    <script src="main.js"></script>
+    <script>
+      // Format ke Rupiah
+      function formatRupiah(angka) {
+        return parseInt(angka).toLocaleString("id-ID");
+      }
+
+      // Fungsi pilih nominal meter
+      function pilihMeter(nominal) {
+        localStorage.setItem("nominalMeter", nominal);
+        document.getElementById(
+          "meter-terpilih"
+        ).textContent = `Nominal: Rp ${formatRupiah(nominal)}`;
+        localStorage.setItem("nominalMeter", nominal);
+        document.getElementById(
+          "meter-display"
+        ).textContent = `Nominal: Rp ${formatRupiah(nominal)}`;
+      }
+
+      // Fungsi bayar
+      function bayar() {
+        alert("Proses pembayaran sedang dilakukan...");
+      }
+
+      // Fungsi lanjut transaksi baru
+      function lanjutTransaksiBaru() {
+        localStorage.clear();
+        window.location.href = "index.html";
+      }
+
+      // Tampilkan nomor & waktu saat halaman dimuat
+      window.onload = function () {
+        const nomor = localStorage.getItem("nomorMeter") || "-";
+        const nominal = localStorage.getItem("nominalMeter");
+        const tanggal = new Date();
+
+        document.getElementById("nomormeter").value = nomor;
+        document.getElementById(
+          "tanggal"
+        ).textContent = `Tanggal: ${tanggal.toLocaleDateString("id-ID")}`;
+        document.getElementById(
+          "jam"
+        ).textContent = `Waktu: ${tanggal.toLocaleTimeString("id-ID")}`;
+
+        if (nominal) {
+          document.getElementById(
+            "meter-terpilih"
+          ).textContent = `Nominal: Rp ${formatRupiah(nominal)}`;
+        }
+      };
+    </script>
   </body>
 </html>
