@@ -99,7 +99,6 @@ body {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
-
 .bawah {
   position: fixed;
   bottom: 0;
@@ -111,7 +110,6 @@ body {
   justify-content: space-around;
   z-index: 1000;
 }
-
 
 .bawah div {
   text-align: center;
