@@ -1,8 +1,8 @@
 html,
 body {
-  /* height: 100%; */
-  /* margin: 0; */
-  /* padding: 0; */
+  height: 100%;
+  margin: 0;
+  padding: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-size: cover;
 }
@@ -103,15 +103,34 @@ body {
   left: 0;
   right: 0;
   display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #ffffff;
-  justify-content: space-around;
+  padding: 8px 0;
+  gap: 250px;
 }
 
 .bawah div {
+  width: 60px;
   text-align: center;
   color: #110f81;
   font-size: 14px;
   font-weight: 500;
+  flex-shrink: 0;
+}
+@media (max-width: 400px) {
+  .bawah {
+    gap: 20px;
+  }
+
+  .bawah div {
+    width: 50px;
+    font-size: 12px;
+  }
+
+  .bawah div i {
+    font-size: 20px;
+  }
 }
 
 .bawah div i {
