@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard PPOB</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- icon dari font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <!-- icon dari remix icon -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- kotak masuk dan saldo-->
+    <div class="dashboard" id="dashboardContainer">
+      <div class="saldo">
+        <div>
+          <strong>Saldo:</strong><br />
+          <span id="saldo"> 113.580.790</span>
+        </div>
+        <div>
+          <button class="kotak-masuk">
+            <a href="kotak-masuk.html" id="kotakmasuk"
+              ><i class="fa-solid fa-bell"></i
+            ></a>
+          </button>
+        </div>
+      </div>
+      <!-- kotak masuk dan saldo end -->
+      <!--  -->
+      
+      <div class="menu-grid">
+        <div class="menu-item">
+          <a href="pulsa.html" id="pulsa"
+            ><i class="fa-solid fa-credit-card" style="font-size: 40px"></i></a
+          >Pulsa&Data
+        </div>
+        <div class="menu-item">
+          <a href="pln.html" id="pln"
+            ><i class="fa-solid fa-bolt" style="font-size: 40px"></i></a
+          >PLN
+        </div>
+        <div class="menu-item">
+          <a href="e-wallet.html" id="E-wallet"
+            ><i class="fa-solid fa-wallet" style="font-size: 40px"></i></a
+          >E-Wallet
+        </div>
+        <div class="menu-item">
+          <a href="bpjs.html" id="bpjs"
+            ><i class="fa-solid fa-house-medical" style="font-size: 40px"></i></a
+          >BPJS
+        </div>
+        <div class="menu-item">
+          <a href="pdam.html" id="pdam"
+            ><i class="fa-solid fa-droplet" style="font-size: 40px"></i></a
+          >PDAM
+        </div>
+        <div class="menu-item">
+          <a href="tv.html" id="tv"
+            ><i class="fa-solid fa-tv" style="font-size: 40px"></i></a
+          >TV/Internet
+        </div>
+        
+      </div>
+      
+      <div class="image"></div>
+      <div class="bawah">
+      <div class="aktivitas"><a href="aktivitas.html" id="aktivitas"><i class="fa-solid fa-chart-line" style="color: #110f81; font-size: 30px;"></i></a>Aktivitas</div>
+      <div class="profil"><a href="profil.html" id="profil"><i class="fa-solid fa-user" style="color: #110f81; font-size: 30px;"></i></i></a>Profil</div>
+    </div>
+    </div>
+  
+
+    <script src="sricpt.js" defer></script>
+    <script src="main.js"></script>
+  </body>
+</html>

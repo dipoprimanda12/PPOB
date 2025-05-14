@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BPJS Ketenagakerjaan</title>
+    <link rel="stylesheet" href="bpjs.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <i class="fa-solid fa-house-medical" style="font-size: 40px"></i>
+        <h1>BPJS Ketenagakerjaan</h1>
+      </header>
+
+      <main class="main-form">
+        <label for="nomorKartu">NOMOR KARTU</label>
+        <input
+          type="text"
+          id="nomorKartu"
+          placeholder="Ketik nomor kartu di sini"
+        />
+
+        <label for="periode">PERIODE TAGIHAN</label>
+        <select id="periode">
+          <option value="">Pilih Program Periode</option>
+          <option value="Januari 2025">April 2025</option>
+          <option value="Februari 2025">Mei 2025</option>
+        </select>
+
+        <button class="btn-cek" disabled>CEK TAGIHAN</button>
+      </main>
+    </div>
+  </body>
+</html>

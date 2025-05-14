@@ -1,0 +1,160 @@
+/* Reset dasar */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+}
+
+/* Header atas */
+.header {
+  background: #007ac1;
+  color: white;
+  padding: 10px 20px;
+}
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.top-bar h1 {
+  font-size: 20px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Input nomor HP */
+.nomor-input {
+  background: white;
+  margin: 15px;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.nomor-input label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.nomor-input input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+/* Bagian pembayaran */
+.pembayaran {
+  margin: 15px;
+  font-weight: bold;
+}
+
+.nominal {
+  background: white;
+  padding: 15px;
+  margin-top: 8px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* Pilihan nominal pulsa */
+.pilihan {
+  max-width: 93%;
+  margin: 20px auto;
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  background-image: url("image/bg5.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  text-transform: uppercase;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+.pilihan h4 {
+  margin-bottom: 15px;
+}
+
+.pilihan-nominal {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.button-pilihan {
+  background-color: #f0f0f0;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button-pilihan:hover {
+  background-color: #007ac1;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* Transaksi box */
+.transaksi {
+  margin: 15px;
+}
+
+.transaksi-box {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.transaksi-box h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.transaksi-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+/* Tombol-tombol */
+.btn {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.bayar {
+  background-color: #007ac1;
+  color: white;
+}
+
+.lanjut {
+  background-color: #e0e0e0;
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* Responsive (opsional) */
+@media (max-width: 600px) {
+  .pilihan-nominal {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .top-bar h1 {
+    font-size: 18px;
+  }
+}

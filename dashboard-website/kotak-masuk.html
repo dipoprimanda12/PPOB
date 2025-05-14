@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kotak Masuk</title>
+    <link rel="stylesheet" href="kotak-masuk.css" />
+    <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Kotak Masuk</h1>
+    </header>
+
+    <main>
+      <div class="inbox-section">
+        <div class="section-title">Hari Ini</div>
+
+        <div class="message new">
+          <div class="message-content">
+            <p>Tagihan PLN Anda telah berhasil dibayar.</p>
+            <span class="time" id="today-time"></span>
+          </div>
+          <button class="btn-delete" onclick="hapusPesan(this)">
+            <i data-lucide="trash-2"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="inbox-section">
+        <div class="section-title">Kemarin</div>
+
+        <div class="message">
+          <div class="message-content">
+            <p>Anda membeli pulsa Rp20.000</p>
+            <span class="time">16:30</span>
+          </div>
+          <button class="btn-delete" onclick="hapusPesan(this)">
+            <i data-lucide="trash-2"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="inbox-section">
+        <div class="section-title">Bulan Lalu</div>
+
+        <div class="message">
+          <div class="message-content">
+            <p>Selamat datang! Akun Anda berhasil dibuat.</p>
+            <span class="time">13:00</span>
+          </div>
+          <button class="btn-delete" onclick="hapusPesan(this)">
+            <i data-lucide="trash-2"></i>
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <script src="main.js">
+    </script>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aktivitas Transaksi</title>
+    <link rel="stylesheet" href="aktivitas.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <a href="index.html" class="btn-back"
+        ><i class="fa-solid fa-chevron-left"></i
+      ></a>
+      <h1>Aktivitas</h1>
+    </header>
+
+    <div class="search-container">
+      <input type="text" placeholder="Cari transaksi..." />
+    </div>
+
+    <div class="filter-tabs">
+      <button class="tab active" onclick="filterTransaksi('all', event)">
+        Semua
+      </button>
+      <button class="tab" onclick="filterTransaksi('gagal', event)">
+        Gagal
+      </button>
+      <button class="tab" onclick="filterTransaksi('selesai', event)">
+        Selesai
+      </button>
+    </div>
+
+    <section class="section">
+      <h2>Bulan Ini</h2>
+
+      <div class="item selesai">
+        <div class="icon"><i class="fa-solid fa-check-circle"></i></div>
+        <div class="details">
+          <p class="title">Pembayaran GoPay</p>
+          <p class="date">10 Mei 2025</p>
+        </div>
+        <div class="amount">Rp 50.000</div>
+      </div>
+
+      <div class="item gagal">
+        <div class="icon"><i class="fa-solid fa-xmark-circle"></i></div>
+        <div class="details">
+          <p class="title">Top up OVO</p>
+          <p class="date">9 Mei 2025</p>
+        </div>
+        <div class="amount">Rp 100.000 <span class="status">Gagal</span></div>
+      </div>
+
+      <div class="item selesai">
+        <div class="icon"><i class="fa-solid fa-check-circle"></i></div>
+        <div class="details">
+          <p class="title">Bayar ShopeePay</p>
+          <p class="date">7 Mei 2025</p>
+        </div>
+        <div class="amount">Rp 25.000</div>
+      </div>
+    </section>
+
+    <script src="main.js"></script>
+  </body>
+</html>

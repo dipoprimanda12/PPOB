@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Belajar JavaScript Interaktif</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    #judul {
+      font-size: 24px;
+      color: blue;
+    }
+    button {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 id="judul">Judul Awal</h1>
+  <button id="klikSaya">Klik Saya</button>
+
+  <hr>
+
+  <h2>Masukkan Nama:</h2>
+  <input type="text" id="namaInput" placeholder="Nama kamu">
+  <button onclick="sapaUser()">Sapa Saya</button>
+  <p id="hasilSapa"></p>
+
+  <hr>
+
+  <h2>Cek Usia</h2>
+  <input type="number" id="usiaInput" placeholder="Masukkan usia">
+  <button onclick="cekUsia()">Cek</button>
+  <p id="hasilCek"></p>
+
+  <hr>
+
+  <h2>Array Buah</h2>
+  <button onclick="tambahBuah()">Tambah Pisang</button>
+  <pre id="listBuah"></pre>
+
+  <hr>
+
+  <h2>Looping</h2>
+  <button onclick="tampilkanAngka()">Tampilkan Angka</button>
+  <pre id="hasilLoop"></pre>
+
+  <script>
+    // 1. Alert dan console
+    alert("Selamat datang!");
+    console.log("Halaman dimuat!");
+
+    // 2. Manipulasi DOM langsung
+    document.getElementById("judul").innerText = "Selamat Belajar JavaScript!";
+
+    // 3. Event listener
+    document.getElementById("klikSaya").addEventListener("click", function () {
+      alert("Tombol berhasil diklik!");
+    });
+
+    // 4. Function interaktif
+    function sapaUser() {
+      const nama = document.getElementById("namaInput").value;
+      document.getElementById("hasilSapa").innerText = "Halo, " + nama + "!";
+    }
+
+    // 5. Kondisional
+    function cekUsia() {
+      const usia = document.getElementById("usiaInput").value;
+      let pesan = usia >= 17 ? "Boleh bikin KTP" : "Belum cukup umur";
+      document.getElementById("hasilCek").innerText = pesan;
+    }
+
+    // 6. Array
+    let buah = ["Apel", "Jeruk", "Mangga"];
+    function tambahBuah() {
+      buah.push("Pisang");
+      document.getElementById("listBuah").innerText = buah.join(", ");
+    }
+
+    // 7. Looping
+    function tampilkanAngka() {
+      let hasil = "";
+      for (let i = 0; i < 5; i++) {
+        hasil += "Angka ke-" + i + "\n";
+      }
+      document.getElementById("hasilLoop").innerText = hasil;
+    }
+  </script>
+</body>
+</html>

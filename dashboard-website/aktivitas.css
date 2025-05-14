@@ -1,0 +1,140 @@
+/* RESET & DASAR */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #f5f7fa;
+  color: #333;
+  max-width: 430px;
+  margin: auto;
+  padding-bottom: 100px;
+}
+
+/* HEADER */
+.header {
+  background: #008cff;
+  color: white;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 18px;
+}
+
+.btn-back i {
+  color: white;
+  font-size: 20px;
+}
+
+/* PENCARIAN */
+.search-container {
+  padding: 10px;
+  background: white;
+  border-bottom: 1px solid #ddd;
+}
+
+.search-container input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* TAB FILTER */
+.filter-tabs {
+  display: flex;
+  justify-content: space-around;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  padding: 8px 0;
+}
+
+.filter-tabs .tab {
+  background: none;
+  border: none;
+  padding: 8px 12px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #555;
+  transition: all 0.3s;
+}
+
+.filter-tabs .tab.active {
+  border-bottom: 2px solid #008cff;
+  color: #008cff;
+}
+
+/* BAGIAN UTAMA */
+.section {
+  padding: 16px;
+}
+
+.section h2 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* ITEM TRANSAKSI */
+.item {
+  background: white;
+  border-radius: 8px;
+  padding: 12px;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.item:hover {
+  transform: translateX(5px);
+}
+
+.icon {
+  font-size: 24px;
+  margin-right: 12px;
+}
+
+/* STATUS WARNA ICON BERDASARKAN STATUS */
+.selesai .icon {
+  color: green;
+}
+
+.pending .icon {
+  color: orange;
+}
+
+.gagal .icon {
+  color: red;
+}
+
+/* DETAIL TRANSAKSI */
+.details {
+  flex: 1;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.date {
+  font-size: 12px;
+  color: #888;
+}
+
+.amount {
+  font-weight: bold;
+  text-align: right;
+}
+
+.gagal .status {
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
+  display: block;
+}

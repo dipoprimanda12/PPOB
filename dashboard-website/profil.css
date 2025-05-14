@@ -1,0 +1,192 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background-color: #f0f2f5;
+  padding: 0;
+  margin: 0;
+}
+
+.keseluruhan {
+  max-width: 400px;
+  margin: auto;
+  background-color: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Section */
+.header {
+  background: #008cff;
+  padding: 16px;
+  color: white;
+  text-align: center;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 103px;
+  margin-bottom: 16px;
+}
+a.btn.back {
+    display: contents;
+}
+
+.tabs button {
+  padding: 6px 16px;
+  border-radius: 20px;
+  border: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.tabs button.active,
+.tabs button:hover {
+  background: #ffffff;
+  color: #008cff;
+}
+
+.btn.back {
+  position: absolute;
+  left: 16px;
+  top: 20px;
+  font-size: 20px;
+  color: white;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 10px;
+  justify-content: flex-start;
+}
+
+.profile img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-info h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.user-info p {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.profile-buttons {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.qr-btn {
+  background: #ffffff;
+  color: #008cff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Security Section */
+.security-section {
+  background: #ffffff;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.progress {
+  width: 100%;
+  background: #e0e0e0;
+  height: 8px;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+.progress .bar {
+  height: 100%;
+  width: 70%;
+  background: #008cff;
+  border-radius: 10px;
+}
+
+/* Services */
+.services {
+  display: flex;
+  justify-content: space-around;
+  background: white;
+  padding: 20px;
+}
+
+.service-item {
+  text-align: center;
+}
+
+.service-item i {
+  margin-bottom: 5px;
+}
+
+.service-item span {
+  display: block;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+/* Summary */
+.summary {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background: white;
+  gap: 16px;
+}
+
+.summary-item {
+  flex: 1;
+  background: #f9f9f9;
+  padding: 12px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.summary-item.green {
+  color: green;
+}
+
+.summary-item.red {
+  color: red;
+}
+
+/* Info Box */
+.info-box {
+  padding: 10px;
+  background-color: #ffffff;
+  margin: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.info-box img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+  object-fit: cover;
+}

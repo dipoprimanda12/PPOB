@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PLN</title>
+    <link rel="stylesheet" href="transaksi.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="top-bar">
+        <h1>PLN</h1>
+      </div>
+    </header>
+
+    <main>
+      <section class="nomor-input">
+        <label for="nomor">Nomor Meter/ID</label>
+        <input type="text" id="nomormeter" readonly />
+      </section>
+
+      <section class="pembayaran">
+        <h2>PLN</h2>
+        <div class="nominal">
+          <p id="pln-nominal">Nominal</p>
+        </div>
+      </section>
+
+      <div id="pilihMeter" class="pilihan">
+        <h4>Pilih Nominal Meter</h4>
+        <div class="pilihan-nominal">
+          <button class="button-pilihan" onclick="pilihMeter('10000')">
+            10RB
+          </button>
+          <button class="button-pilihan" onclick="pilihMeter('20000')">
+            20RB
+          </button>
+          <button class="button-pilihan" onclick="pilihMeter('30000')">
+            30RB
+          </button>
+          <button class="button-pilihan" onclick="pilihMeter('40000')">
+            40RB
+          </button>
+          <button class="button-pilihan" onclick="pilihMeter('100000')">
+            100RB
+          </button>
+          <button class="button-pilihan" onclick="pilihMeter('150000')">
+            150RB
+          </button>
+          <button class="button-pilihan" onclick="pilihMeter('200000')">
+            200RB
+          </button>
+          <button class="button-pilihan" onclick="pilihMeter('250000')">
+            250RB
+          </button>
+          <button class="button-pilihan" onclick="pilihMeter('350000')">
+            350RB
+          </button>
+        </div>
+      </div>
+      <section class="transaksi">
+        <div class="transaksi-box">
+          <h3>Transaksi Berlangsung</h3>
+          <div class="transaksi-item">
+            <div>
+              <p id="tanggal">Tanggal</p>
+              <p id="jam">waktu</p>
+              <p id="pln-nominal-transaksi">Nominal: -</p>
+            </div>
+            <button class="btn bayar" onclick="bayar()">BAYAR</button>
+          </div>
+          <button class="btn lanjut" onclick="lanjutTransaksiBaru()">
+            LANJUT TRANSAKSI BARU
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: #f9f9f9;
+  max-width: 480px;
+  margin: auto;
+}
+
+header {
+  background: #005eff;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.inbox-section {
+  margin-top: 10px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+}
+
+.section-title {
+  background: #d6e4ff;
+  padding: 10px 16px;
+  font-weight: bold;
+  border-bottom: 1px solid #c0c0c0;
+  border-radius: 10px 10px 0 0;
+}
+
+.message {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  border-bottom: 1px solid #eee;
+  position: relative;
+}
+
+.message-content {
+  flex: 1;
+  font-size: 15px;
+  position: relative;
+}
+
+.message-content p {
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.message-content .time {
+  font-size: 12px;
+  color: #888;
+}
+
+.btn-delete {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #d11a2a;
+  margin-left: 10px;
+}
+
+.message.new {
+  background-color: #e6f0ff;
+  border-left: 4px solid #007bff;
+}
+      
