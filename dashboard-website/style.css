@@ -99,14 +99,19 @@ body {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
+
 .bawah {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
   padding: 10px 0;
   background-color: #f5f5f5;
-  border-radius: 12px;
+  justify-content: space-around;
+  z-index: 1000;
 }
+
 
 .bawah div {
   text-align: center;
