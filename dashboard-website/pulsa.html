@@ -10,9 +10,15 @@
     <div class="mobile-container">
       <div id="halamanpulsa" class="halaman-pulsa">
         <h4 id="halamanTitle">Layanan Pulsa</h4>
-        <input id="nomor" type="number" placeholder="Masukkan Nomor Telepon" />
+        <input
+          id="nomor"
+          type="tel"
+          placeholder="Masukkan Nomor Telepon"
+          maxlength="15"
+        />
         <button class="btn" onclick="simpanNomor()">Proses</button>
       </div>
+
       <div id="riwayatnomor" class="riwayat-nomor">
         <h4 id="riwayatTitle">Riwayat Nomor</h4>
         <table id="tabelRiwayat">
@@ -24,32 +30,32 @@
             </tr>
           </thead>
           <tbody>
-            <tr onclick="pilihNomor(`089765654356`)" data-nomor="081234567890">
+            <tr onclick="pilihNomor('089765654356')">
               <td>1</td>
               <td>089765654356</td>
               <td>2024-06-11</td>
             </tr>
-            <tr>
+            <tr onclick="pilihNomor('089876543210')">
               <td>2</td>
               <td>089876543210</td>
               <td>2024-06-10</td>
             </tr>
-            <tr>
+            <tr onclick="pilihNomor('082112223334')">
               <td>3</td>
               <td>082112223334</td>
               <td>2024-06-09</td>
             </tr>
-            <tr>
+            <tr onclick="pilihNomor('085612345678')">
               <td>4</td>
               <td>085612345678</td>
               <td>2024-06-08</td>
             </tr>
-            <tr>
+            <tr onclick="pilihNomor('089602799141')">
               <td>5</td>
-              <td>087712345678</td>
+              <td>089602799141</td>
               <td>2024-06-07</td>
             </tr>
-            <tr>
+            <tr onclick="pilihNomor('081398765432')">
               <td>6</td>
               <td>081398765432</td>
               <td>2024-06-06</td>
@@ -60,14 +66,13 @@
     </div>
 
     <script>
-      function pilihNomor(e) {
+      function pilihNomor(nomor) {
         const inputNomor = document.getElementById("nomor");
-        inputNomor.value = e;
+        inputNomor.value = nomor;
       }
 
-      // simpan nomor
       function simpanNomor() {
-        const nomor = document.getElementById("nomor").value;
+        const nomor = document.getElementById("nomor").value.trim();
         if (nomor) {
           localStorage.setItem("nomorHP", nomor);
           window.location.href = "transaksi.html";
@@ -75,7 +80,6 @@
           alert("Silakan masukkan nomor terlebih dahulu.");
         }
       }
-      
     </script>
   </body>
 </html>

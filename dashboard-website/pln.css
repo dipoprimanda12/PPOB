@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Segoe UI", sans-serif;
   background: #f1f1f1;
   display: flex;
   justify-content: center;
@@ -22,7 +22,7 @@ body {
 /* Header / Bagian atas */
 .halaman-pln {
   padding: 24px 20px 80px; /* Tambah padding bawah */
-  background-image: url('image/bg5.jpeg');
+  background-image: url("image/bg5.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
@@ -93,10 +93,12 @@ table {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
-th, td {
+th,
+td {
   padding: 10px;
   text-align: left;
   border-bottom: 1px solid #eee;
+  cursor: pointer;
 }
 
 th {
