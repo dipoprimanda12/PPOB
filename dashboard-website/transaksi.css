@@ -41,7 +41,7 @@ body {
 }
 
 .nomor-input input {
-  width: 100%;
+  width: -webkit-fill-available;
   padding: 12px;
   font-size: 16px;
   border: 1px solid #ccc;
