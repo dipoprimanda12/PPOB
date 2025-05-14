@@ -1,20 +1,18 @@
 html,
 body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
+  /* height: 100%; */
+  /* margin: 0; */
+  /* padding: 0; */
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-size: cover;
 }
 
 .dashboard {
   max-width: 400px;
-  width: 100%;
   height: -webkit-fill-available;
   margin: auto;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   background: #fff;
   border-radius: 20px;
   overflow: hidden;
@@ -105,10 +103,8 @@ body {
   left: 0;
   right: 0;
   display: flex;
-  padding: 10px 0;
-  background-color: #f5f5f5;
+  /* background-color: #f5f5f5; */
   justify-content: space-around;
-  z-index: 1000;
 }
 
 .bawah div {
